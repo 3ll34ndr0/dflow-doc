@@ -11,7 +11,6 @@ yosys_deps="tcsh autoconf gperf build-essential clang bison flex libreadline-dev
 
 sudo apt-get install $yosys_deps
 
-
 ##### Compilar iverilog
 
 git clone git://github.com/steveicarus/iverilog.git
@@ -26,10 +25,16 @@ make
 
 sudo make install
 
-##### Compilo yosys
+##### Instalar Yosys en Ubuntu 12.04
+sudo add-apt-repository ppa:saltmakrell/ppa
+
+sudo apt-get update                                                                                                                                                                                           sudo apt-get install yosys
+
+##### Compilar Yosys (cualquier distribución)
+
 make config-gcc # Otra alternativa es make config-clang (si da error)
 
-make test
+make test # Puede fallar algún test, prestar atención.
 
 sudo make install
  
