@@ -1,12 +1,11 @@
 # dflow-doc
 Documentación de un Flujo de Diseño Digital para Circuitos Integrados
-## Notas de instalación de todo el flujo digital:
-## Qflow: Digital Synthesis Flow
-## http://opencircuitdesign.com/qflow/
-## Requerimientos del flujo:
-## http://opencircuitdesign.com/qflow/welcome.html#Components
+### Notas de instalación de todo el flujo de síntesis digital (Qflow):
+http://opencircuitdesign.com/qflow/
+### Requerimientos del flujo:
+ http://opencircuitdesign.com/qflow/welcome.html#Components
 
-### Para compilar iverilog y Yosys, primero instalo algunas dependencias:
+##### Para compilar iverilog y Yosys, primero instalo algunas dependencias:
 yosys_deps="tcsh autoconf gperf build-essential clang bison flex libreadline-dev minisat gawk tcl-dev libffi-dev git mercurial graphviz xdot pkg-config python"
 sudo apt-get install $yosys_deps
 
