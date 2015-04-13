@@ -42,7 +42,7 @@ make
 
 sudo make install
 
-##### Instalación de qroute 1.3 (http://opencircuitdesign.com/qrouter/) :
+##### Instalación de [qroute 1.3](http://opencircuitdesign.com/qrouter/) :
 git clone git://opencircuitdesign.com/qrouter-1.3 
 
 cd qrouter-1.3/
