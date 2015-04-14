@@ -35,7 +35,9 @@ sudo apt-get update
 
 sudo apt-get install yosys graywolf qroute
 
-##### Compilar Yosys (cualquier distribución)
+#### Instalar los tres programas en cualquier distribución
+
+##### Compilar Yosys 
 
 make config-gcc # Otra alternativa es make config-clang (si da error)
 
