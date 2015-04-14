@@ -29,10 +29,11 @@ sudo make install
 ####### Agrego un repositorio especial para Yosys: 
 sudo add-apt-repository ppa:saltmakrell/ppa
 
-sudo apt-get update                                                                                                                                                                                           ####### Instalo los tres programas desde el repositorio:
+sudo apt-get update
+
+####### Instalar los 3 programas desde los repositorios:
+
 sudo apt-get install yosys graywolf qroute
-
-
 
 ##### Compilar Yosys (cualquier distribución)
 
