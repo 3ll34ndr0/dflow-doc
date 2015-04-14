@@ -32,8 +32,8 @@ sudo add-apt-repository ppa:saltmakrell/ppa
 sudo apt-get update
 
 ####### Instalar los 3 programas desde los repositorios:
-
-sudo apt-get install yosys graywolf qroute
+######## (Qflow instala automáticamente la versión 7.x de magic)
+sudo apt-get install yosys graywolf qroute qflow qflow-tech-osu035 qflow-tech-osu050
 
 #### Instalar los tres programas en cualquier distribución
 
@@ -70,5 +70,33 @@ cd qrouter-1.3/
 make
 
 su make install
- 
- 
+
+##### Qflow 
+git clone git://opencircuitdesign.com/qflow-1.0  
+
+cd qflow-1.0
+
+./configure
+
+make
+
+sudo make instal
+
+##### Magic
+Para la versión 7.x, simplemente hacer:
+
+sudo apt-get install magic
+
+####### Para descargar y compilar la versión 8.0:
+git clone git://opencircuitdesign.com/magic-8.0
+
+sudo apt-get install m4 csh libx11-dev libx11-dev tcl-dev tk-dev blt-dev libqt4-opengl libqt4-opengl-dev
+
+cd magic-8.0
+
+./configure
+
+make
+
+sudo make install
+
