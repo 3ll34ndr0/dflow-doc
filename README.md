@@ -25,10 +25,14 @@ make
 
 sudo make install
 
-##### Instalar Yosys en Ubuntu 12.04
+#### Instalar Yosys, graywolf y qroute en Ubuntu 12.04
+####### Agrego un repositorio especial para Yosys: 
 sudo add-apt-repository ppa:saltmakrell/ppa
 
-sudo apt-get update                                                                                                                                                                                           sudo apt-get install yosys
+sudo apt-get update                                                                                                                                                                                           ####### Instalo los tres programas desde el repositorio:
+sudo apt-get install yosys graywolf qroute
+
+
 
 ##### Compilar Yosys (cualquier distribución)
 
