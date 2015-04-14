@@ -6,10 +6,10 @@ Documentación de un Flujo de Diseño Digital para Circuitos Integrados
 
 ## Instrucciones para la instalación:
 
-##### Para compilar iverilog y Yosys, primero instalo algunas dependencias:
-yosys_deps="tcsh autoconf gperf build-essential clang bison flex libreadline-dev minisat gawk tcl-dev libffi-dev git mercurial graphviz xdot pkg-config python"
+##### Para compilar los programas, antes necesitamos otros programas instalados:
+misc_deps="tcsh autoconf gperf build-essential clang bison flex libreadline-dev minisat gawk tcl-dev libffi-dev git mercurial graphviz xdot pkg-config python cmake libx11-dev tkcon tk-dev"
 
-sudo apt-get install $yosys_deps
+sudo apt-get install $misc_deps
 
 ##### Compilar iverilog
 
@@ -38,7 +38,7 @@ make test # Puede fallar algún test, prestar atención.
 
 sudo make install
  
-##### Instalación de la herramienta de  Placement (graywolf):
+##### Instalación de la herramienta de placement (graywolf):
 git clone https://github.com/rubund/graywolf.git
 
 cd graywolf
