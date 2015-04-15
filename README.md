@@ -7,11 +7,12 @@ Documentación de un Flujo de Diseño Digital para Circuitos Integrados
 ## Instrucciones para la instalación:
 
 ##### Para compilar los programas, antes necesitamos otros programas instalados:
+
 misc_deps="tcsh autoconf gperf build-essential clang bison flex libreadline-dev minisat gawk tcl-dev libffi-dev git mercurial graphviz xdot pkg-config python cmake libx11-dev tkcon tk-dev"
 
 sudo apt-get install $misc_deps
 
-##### Compilar iverilog
+#### Compilar iverilog
 
 git clone git://github.com/steveicarus/iverilog.git
 
@@ -25,17 +26,21 @@ make
 
 sudo make install
 
-#### Instalar Yosys, graywolf y qroute en Ubuntu 12.04
-####### Agrego un repositorio especial para Yosys: 
+#### Instalar Yosys, qflow, graywolf y qroute en Ubuntu 12.04 
+####### A) Instalar los programas desde los repositorios:
+
+######## Agrego un repositorio especial para Yosys: 
 sudo add-apt-repository ppa:saltmakrell/ppa
 
 sudo apt-get update
 
-####### Instalar los 3 programas desde los repositorios:
-######## (Qflow instala automáticamente la versión 7.x de magic)
+####### (Qflow instala automáticamente la versión 7.x de magic)
+
 sudo apt-get install yosys graywolf qroute qflow qflow-tech-osu035 qflow-tech-osu050
 
-#### Instalar los tres programas en cualquier distribución
+######### Fin de la instalación con Ubuntu desde repositorios
+
+####### B) Instalar los programas en cualquier distribución
 
 ##### Descargar y compilar Yosys 
 
