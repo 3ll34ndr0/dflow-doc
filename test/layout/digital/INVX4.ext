@@ -1,0 +1,21 @@
+timestamp 1429114932
+version 8.0
+tech scmos
+style TSMC0.35um(tsmc35)from:t11c
+scale 1000 1 5
+resistclasses 3700 2800 1018000 1018000 1 6000 6000 80 70 80 40
+node "xp_8_132#" 0 0 8 132 m1p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "xp_40_172#" 0 0 40 172 m1p 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+node "gnd" 56 533.68 -8 -8 poc 3200 400 512 128 0 0 0 0 0 0 0 0 0 0 5632 640 0 0 0 0 0 0
+node "Y" 33 231.224 36 24 ndif 1920 208 3840 368 0 0 0 0 0 0 0 0 0 0 5632 736 0 0 0 0 0 0
+node "A" 525 871.208 8 116 pc 0 0 0 0 0 0 0 0 0 0 5920 1456 0 0 512 96 0 0 0 0 0 0
+node "vdd" 1643 4977.24 -36 192 nw 512 128 6400 720 33744 752 0 0 0 0 0 0 0 0 8192 960 0 0 0 0 0 0
+cap "vdd" "Y" 253.27
+cap "Y" "gnd" 116.841
+cap "A" "vdd" 210.276
+cap "A" "Y" 61.111
+cap "A" "gnd" 13.746
+device mosfet nfet 60 24 61 25 8 80 "gnd" "A" 16 0 "Y" 80 0 "gnd" 80 0
+device mosfet nfet 28 24 29 25 8 80 "gnd" "A" 16 0 "gnd" 80 0 "Y" 80 0
+device mosfet pfet 60 216 61 217 8 160 "vdd" "A" 16 0 "Y" 160 0 "vdd" 160 0
+device mosfet pfet 28 216 29 217 8 160 "vdd" "A" 16 0 "vdd" 160 0 "Y" 160 0
