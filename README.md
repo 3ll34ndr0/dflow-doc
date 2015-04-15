@@ -27,7 +27,7 @@ make
 sudo make install
 
 #### Instalar Yosys, qflow, graywolf y qroute en Ubuntu 12.04 
-####### A) Instalar los programas desde los repositorios:
+##### A) Instalar los programas desde los repositorios:
 
 ######## Agrego un repositorio especial para Yosys: 
 sudo add-apt-repository ppa:saltmakrell/ppa
@@ -40,7 +40,7 @@ sudo apt-get install yosys graywolf qroute qflow qflow-tech-osu035 qflow-tech-os
 
 ######### Fin de la instalación con Ubuntu desde repositorios
 
-####### B) Instalar los programas en cualquier distribución
+##### B) Instalar los programas en cualquier distribución
 
 ##### Descargar y compilar Yosys 
 
