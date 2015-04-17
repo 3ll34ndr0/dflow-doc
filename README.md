@@ -26,7 +26,7 @@ make
 
 sudo make install
 
-#### Instalar Yosys, qflow, graywolf y qroute en Ubuntu 12.04 
+#### Instalar Yosys, qflow, graywolf y qrouter en Ubuntu 12.04 
 ##### A) Instalar los programas desde los repositorios:
 
 ######## Agrego un repositorio especial para Yosys: 
@@ -36,7 +36,7 @@ sudo apt-get update
 
 ####### (Qflow instala automáticamente la versión 7.x de magic)
 
-sudo apt-get install yosys graywolf qroute qflow qflow-tech-osu035 qflow-tech-osu050
+sudo apt-get install yosys graywolf qrouter qflow qflow-tech-osu035 qflow-tech-osu050
 
 ######### Fin de la instalación con Ubuntu desde repositorios
 
@@ -65,7 +65,7 @@ make
 
 sudo make install
 
-##### Instalación de [qroute 1.3](http://opencircuitdesign.com/qrouter/) :
+##### Instalación de [qrouter 1.3](http://opencircuitdesign.com/qrouter/) :
 git clone git://opencircuitdesign.com/qrouter-1.3 
 
 cd qrouter-1.3/
@@ -85,7 +85,7 @@ cd qflow-1.0
 
 make
 
-sudo make instal
+sudo make install
 
 ##### Magic
 Para la versión 7.x, simplemente hacer:
