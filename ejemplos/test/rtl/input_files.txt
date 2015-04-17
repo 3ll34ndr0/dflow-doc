@@ -1,0 +1,3 @@
+# Lista de archivos que usará el simulador
+map9v3_tb.v
+../source/map9v3.v

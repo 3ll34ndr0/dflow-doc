@@ -1,0 +1,31 @@
+[*]
+[*] GTKWave Analyzer v3.3.37 (w)1999-2012 BSI
+[*] Fri Apr 17 02:43:07 2015
+[*]
+[dumpfile] "/home/lean/Documentos/dflow-doc/ejemplos/test/rtl/map9v3_tb.vcd"
+[dumpfile_mtime] "Fri Apr 17 02:40:05 2015"
+[dumpfile_size] 22723
+[savefile] "/home/lean/Documentos/dflow-doc/ejemplos/test/rtl/map9v3_tb.gtkw"
+[timestart] 0
+[size] 1366 715
+[pos] -1 -1
+*-10.000000 40 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] map9v3_tb.
+[sst_width] 224
+[signals_width] 166
+[sst_expanded] 1
+[sst_vpaned_height] 185
+@28
+map9v3_tb.map9v3_inst.clock
+@29
+map9v3_tb.map9v3_inst.start
+@28
+map9v3_tb.map9v3_inst.reset
+@24
+map9v3_tb.map9v3_inst.N[8:0]
+map9v3_tb.map9v3_inst.dp[8:0]
+map9v3_tb.map9v3_inst.done
+map9v3_tb.map9v3_inst.counter[7:0]
+map9v3_tb.map9v3_inst.sr[7:0]
+[pattern_trace] 1
+[pattern_trace] 0
