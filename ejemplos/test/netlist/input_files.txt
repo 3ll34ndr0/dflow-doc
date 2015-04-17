@@ -1,0 +1,5 @@
+# Lista de archivos que usará el simulador
+map9v3_gates_tb.v
+#../source/map9v3.v
+../synthesis/map9v3.rtlnopwr.v
+../../tech/osu035/osu035_stdcells.v
