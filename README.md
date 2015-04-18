@@ -105,7 +105,6 @@ make
 sudo make install
 
 
-### Notas de instalación de todo el flujo de síntesis digital [Qflow](http://opencircuitdesign.com/qflow/).
 ###### Para ver la documentación original sobre los requerimientos del flujo, hacer click [aqui](http://opencircuitdesign.com/qflow/welcome.html#Components).
 
 
