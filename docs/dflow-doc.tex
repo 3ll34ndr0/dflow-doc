@@ -87,7 +87,7 @@
 %	TITLE PAGE
 %----------------------------------------------------------------------------------------
 
-\title[Flujo Digital]{Instalación y Configuración de un Flujo de Diseño Digital} % The short title appears at the bottom of every slide, the full title is only on the title page
+\title[Flujo Digital]{Instalación y configuración de un Flujo de Diseño Digital} % The short title appears at the bottom of every slide, the full title is only on the title page
 
 \author{Leandro Marsó} % Your name
 \institute[] % Your institution as it will appear on the bottom of every slide, may be shorthand to save space
@@ -139,14 +139,44 @@ keywordstyle=\color{blue},
 
 \end{frame}
 %-------------------------------------------------------------
+\section{Instalación y prueba}
 \begin{frame}
   \frametitle{Instalación del flujo digital}
   Para instalar todas las herramientas, seguir las instrucciones detalladas en el repositorio que vamos a utilizar:
 
   \url{https://github.com/elleandroculia/dflow-doc}
 
+  Asegurarse que todos los programas se hayan instalado correctamente.
 \end{frame}
 %-------------------------------------------------------------
+
+\begin{frame}[fragile]
+  \frametitle{Descargar los ejemplos y la configuración}
+Descargamos todos los archivos de configuración para hacer funcionar todo el flujo con un diseño de prueba.
+
+En un directorio cualquiera y desde la consola hacemos:
+\begin{footnotesize}
+  \begin{lstlisting}[language=bash]
+git clone https://github.com/elleandroculia/dflow-doc.git
+\end{lstlisting}
+\end{footnotesize}
+
+Probar el ejemplo:
+\begin{footnotesize}
+\begin{lstlisting}
+cd ejemplos/test
+qflow synthesize place buffer route display map9v3
+\end{lstlisting}
+\end{footnotesize}
+
+
+El resultado final se mostrará en una ventana, donde podremos ver el circuito.
+
+\end{frame}
+%-------------------------------------------------------------
+
+%-------------------------------------------------------------
+
 \begin{frame}
 \textbf{Flujo de diseño digital} 
    \begin{figure}[ht]
@@ -177,18 +207,46 @@ Nuestra herramienta trae instalada 2 design kits: OSU035 y OSU05
 %---------------------------------------------------
 
 \begin{frame}[fragile]
-  \frametitle{\emph{Floorplan y placement}}
+  \frametitle{\emph{Floorplan y placement} con \textbf{graywolf}}
   \begin{exampleblock}{Herramienta de \emph{placement}}
     En \textbf{Qflow} se utiliza \textbf{graywolf}. El resultado que produce esta herramienta es un \emph{layout} en formato DEF, que representa al circuito realizado con celdas estándar instanciadas en el plano y los pines de entrada y salida.
-
-    Se pueden indicar varios \emph{constraints} a esta herramienta: ubicación de los pines, cantidad de filas a utilizar, celdas de relleno, etc.
-
-    Para ubicar los pines de entrada y salida, editar el archivo ubicado en \verb.layout. con extención \verb.cel..  Con el archivo de extensión \verb.par. podemos indicar cantidad de filas de celdas estándar que serán usadas. Si no indicamos nada, graywolf intentará un \emph{floorplan} cuadrado.
-
   \end{exampleblock}
 \end{frame}
 
+\begin{frame}[fragile]
+  \frametitle{Archivos para guiar la herramienta}
+
+Para guiar el resultado de la herramienta, editar los archivos:
+\begin{itemize}
+  \item \emph{nombreDelMódulo}\verb#.cel# 
+  \item \emph{nombreDelMódulo}\verb#.cel2# 
+  \item \emph{nombreDelMódulo}\verb#.par#.
+\end{itemize}
+
+Por ejemplo, luego de la primera prueba podemos encontrar el archivo \verb#map9v3.par# en el directorio \verb.layout.:
+\begin{exampleblock}{Modificar la cantidad de filas del floorplan}
+Si descomentamos la línea:
+
+\verb.#  GENR*numrows           : 6. 
+
+nuestro \emph{floorplan} tendrá 6 filas de celdas. 
+\end{exampleblock}
+%  Se pueden indicar varios \emph{constraints} a esta herramienta: ubicación de los pines, cantidad de filas a utilizar, celdas de relleno, etc.
+
+%    Para ubicar los pines de entrada y salida, editar el archivo ubicado en \verb.layout. con extención \verb.cel..  Con el archivo de extensión \verb.par. podemos indicar cantidad de filas de celdas estándar que serán usadas. Si no indicamos nada, graywolf intentará un \emph{floorplan} cuadrado.
+
+\end{frame}
+
 %---------------------------------------------------
+\begin{frame}
+  Descargar la documentación completa de Timberwolf:
+  \begin{tiny}
+  \url{https://github.com/rubund/timberwolf/raw/master/doc/TimberWolf.pdf}
+\end{tiny}
+
+Aclaración: \textbf{Qflow} utiliza \textbf{graywolf} que es un fork de \textbf{Timberwolf 1.3}, del cual sólo usa las herramientas de \emph{floorplan} y \emph{placement}.
+\end{frame}
+
 
 \begin{frame}
 \frametitle{DEF/LEF}
