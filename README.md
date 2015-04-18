@@ -1,8 +1,7 @@
 # dflow-doc
 Documentación de un Flujo de Diseño Digital para Circuitos Integrados
-### Notas de instalación de todo el flujo de síntesis digital [Qflow](http://opencircuitdesign.com/qflow/).
-###### Para ver la documentación sobre los requerimientos del flujo, hacer click [aqui](http://opencircuitdesign.com/qflow/welcome.html#Components).
 
+### Notas de instalación de todo el flujo de síntesis digital [Qflow](http://opencircuitdesign.com/qflow/).
 
 ## Instrucciones para la instalación:
 
@@ -104,4 +103,9 @@ cd magic-8.0
 make
 
 sudo make install
+
+
+### Notas de instalación de todo el flujo de síntesis digital [Qflow](http://opencircuitdesign.com/qflow/).
+###### Para ver la documentación original sobre los requerimientos del flujo, hacer click [aqui](http://opencircuitdesign.com/qflow/welcome.html#Components).
+
 
