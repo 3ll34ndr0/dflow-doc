@@ -1,0 +1,51 @@
+* Instrucciones para realizar el ejercicio del flujo digital.
+
+
+*** Preparar el flujo
+Crear un directorio con nombre alu, y dentro crear tres directorios:
+layout
+synthesis
+source
+
+En el directorio source copiar los siguientes 3 archivos:
+
+omsp_alu.v
+openMSP430_defines.v
+openMSP430_undefines.v
+
+En el archivo openMSP430_defines.v descomentar la línea `define ASIC.
+
+*** Place & Route
+Desde el directorio alu correr:
+qflow omsp_alu
+
+Luego editar el archivo qflow_exe.sh y descomentar las primeras 6 líneas, lo que significa que se realizarán las siguientes tareas: Sintesis, placement, resíntesis, placement, STA (static timing analysis) y ruteo.
+
+Luego correr el script qflow_exe.sh, de la siguiente forma:
+./qflow_exe.sh
+
+Una vez finalizado este proceso, examinar el archivo donde quedan logueadas todas las salidas de las herramientas: 
+synth.log y ver si el ruteador pudo realizar la tarea. 
+Seguro verán una línea que dice Final: "Failed net routes: 2"
+Eso quiere decir que el ruteador no soluciona el problema de rutear todas las redes, con la configuración por defecto de todas las herramientas. Ahora comienza el trabajo del diseñador, ingresando más información para ayudar a la herramienta. Podemos mejorar el floorplan, indicando dónde queremos ubicar los puertos de entrada y salida, o cambiar el factor de forma del floorplan. Prueben con la segunda opción que es la más fácil, editando el archivo que se encuentra en el directorio layout, con nombre omsp_alu.par (la extensión .par significa place and route, y es archivo con el cual guiamos a la herramienta greywolf que en este flujo SOLO hace placement).
+
+El parámetro a cambiar está en la línea que dice TWMC*chip.aspect.ratio, con 1 para un floorplan lo más cuadrado posible y cuanto más cerca de cero, un floorplan más rectangular en el sentido de las x.
+
+Una vez que modifican el valor por defecto, tienen que editar nuevamente el archivo qflow_exe.sh para comentar la línea de síntesis (ya que no es necesario) y corren nuevamente este script, y al finalizar miran el log para ver si pudo rutear todas las nets. Este trabajo es iterativo, hasta lograr el objetivo o llegar a la conclusión que con ese parámetro tampoco ayudan mucho a la herramienta.
+
+Lo otro que suele ayudar bastante a la herramienta es determinar la ubicación de los puertos, pero por ser una tarea bastante tediosa y que requiere de un conocimiento de la arquitectura del circuito que queremos realizar, diremos que está mas allá de nuestros objetivos actuales. Para saber qué archivo tocar para ubicar los puertos ver el manual de Timberwolf[1], pero no se preocupen si no entienden nada al leerlo, a quien quiera hacerlo le paso un ejemplo y van a poder hacerlo.
+
+Una vez que el circuito esté completamente ruteado, ya lo pueden ver desde magic haciendo lo siguiente:
+Desde el directorio layout lanzan magic, y luego en la consola TCL, primero cargan las celdas estándar:
+lef read /usr/local/share/qflow/tech/osu035/osu035_stdcells.lef
+
+Y después, desde la misma consola tcl, cargan el layout:
+def read omsp_alu.def
+
+A esta altura ya deben poder ver el layout ruteado (a exepción de los raild de VDD y VSS).
+
+
+
+
+[1]: Qflow utiliza Graywolf, que es un fork de la versión de Timberwolf 6.1, por eso se usa el mismo manual (al menos para la configuración). El manual lo pueden encontrar en el directorio docs 
+
