@@ -64,10 +64,10 @@ make
 
 sudo make install
 
-##### Instalación de [qrouter 1.3](http://opencircuitdesign.com/qrouter/) :
-git clone git://opencircuitdesign.com/qrouter-1.3 
+##### Instalación de [qrouter 1.4](http://opencircuitdesign.com/qrouter/) :
+git clone git://opencircuitdesign.com/qrouter-1.4 
 
-cd qrouter-1.3/
+cd qrouter-1.4/
 
 ./configure 
 
@@ -76,6 +76,8 @@ make
 su make install
 
 ##### Qflow 
+Para la versin de desarrollo:
+
 git clone git://opencircuitdesign.com/qflow-1.2
 
 cd qflow-1.2
@@ -87,16 +89,16 @@ make
 sudo make install
 
 ##### Magic
-Para la versión 7.x, simplemente hacer:
+Para la versión estable 8.x, simplemente hacer:
 
 sudo apt-get install magic
 
-####### Para descargar y compilar la versión 8.0:
-git clone git://opencircuitdesign.com/magic-8.0
+####### Para descargar y compilar la versión de desarrollo (8.2):
+git clone git://opencircuitdesign.com/magic-8.2
 
 sudo apt-get install m4 csh libx11-dev libx11-dev tcl-dev tk-dev blt-dev libqt4-opengl libqt4-opengl-dev
 
-cd magic-8.0
+cd magic-8.2
 
 ./configure
 
