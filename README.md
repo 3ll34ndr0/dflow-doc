@@ -76,9 +76,9 @@ make
 su make install
 
 ##### Qflow 
-git clone git://opencircuitdesign.com/qflow-1.0  
+git clone git://opencircuitdesign.com/qflow-1.2
 
-cd qflow-1.0
+cd qflow-1.2
 
 ./configure
 
