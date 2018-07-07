@@ -4,7 +4,7 @@ Documentación de un Flujo de Diseño Digital para Circuitos Integrados usando [
 
 
 ## Instrucciones para la instalación:
-
+I
 ##### Para compilar los programas, antes necesitamos otros programas instalados:
 
 ```
