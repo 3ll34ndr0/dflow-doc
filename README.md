@@ -7,9 +7,12 @@ Documentación de un Flujo de Diseño Digital para Circuitos Integrados usando [
 ```
 git clone https://gitlab.com/3ll34ndr0/asicflow-installer.git
 cd asicflow-installer
-bash install.sh``
+bash install.sh
 ```
 
 ###### Para ver la documentación original sobre los requerimientos del flujo, hacer click [aqui](http://opencircuitdesign.com/qflow/welcome.html#Components).
+
+## Tutorial:
+[Filminas](https://github.com/3ll34ndr0/dflow-doc/blob/master/docs/dflow-doc.pdf)
 
 
